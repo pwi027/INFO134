@@ -56,14 +56,6 @@ body {
     background-color: #333333;
 }
 
-@media only screen and (max-width: 768px) {
-  .navigation{
-    flex-direction: column;
-    float: left;
-    text-align: left;
-  }
-}
-
 #navitem {
   float: left;
   border-right: 5% solid #bbb;
@@ -85,6 +77,16 @@ body {
   padding: 1em 3em;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .navigation{
+    flex-direction: column;
+    float: left;
+    text-align: left;
+  }
+}
+
+
 
 #map {
   height: 80%;
@@ -110,29 +112,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 85%;
-}
-
-
-.navitem {
-    float: left;
-  border-right: 5% solid #bbb;
-  font-size: large;
-}
-
-.navitem:hover {
-  background-color: #AA11AA;
-}
-
-.navitem:last-child {
-  border-right: none;
-}
-
-.navitem a {
-  display:block;
-  color:white;
-  text-align: center;
-  padding: 1em 3em;
-  text-decoration: none;
 }
 
 .post-container {
