@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
+.parallax {
+    background-image: url("img/konsert.jpg");
+
+    height: 500px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+.navitem {
+  float: left;
+  border-right: 5% solid #bbb;
+  font-size: large;
+}
+
+.navitem:hover {
+  background-color: #AA11AA;
+}
+
+.navitem:last-child {
+  border-right: none;
+}
+
+.navitem a {
+  display:block;
+  color:white;
+  text-align: center;
+  padding: 1em 3em;
+  text-decoration: none;
+}
+
+.post-container {
+    margin: 20px 20px 0 0;
+    overflow: auto;
+}
+.post-thumb {
+    float: left;
+}
+.post-thumb img {
+    display: block;
+    padding: 25px;
+}
+.post-content {
+    margin-left: 210px;
+}
+.post-title {
+    font-weight: bold;
+    font-size: 200%;
+}
+
+img {
+  width: 700px;
+  height: auto;
+}

@@ -1,0 +1,107 @@
+
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    font-family: Arial black;
+    letter-spacing: 1.5em;
+}
+
+#bakgrunn{
+  filter: brightness(70%) contrast(170%);
+}
+
+
+/* Centered text */
+#centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    opacity: 0.7;
+    color: white;
+    text-shadow: 5px 5px 20px #000000;
+    text-decoration: overline grey;
+}
+}
+a {
+font-family: Impact;
+font-size: 24px;
+text-decoration: none;
+}
+
+a:hover {
+color: green;
+text-decoration: none;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+.navigation {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation{
+    flex-direction: column;
+    float: left;
+    text-align: left;
+  }
+}
+
+#navitem {
+  float: left;
+  border-right: 5% solid #bbb;
+  font-size: large;
+}
+
+#navitem:hover {
+  background-color: #AA11AA;
+}
+
+#navitem:last-child {
+  border-right: none;
+}
+
+#navitem a {
+  display:block;
+  color:white;
+  text-align: center;
+  padding: 1em 3em;
+  text-decoration: none;
+}
+
+#map {
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  bottom: 10%;
+  border: 0px solid black;
+}
+
+#overskrift {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  font-size: x-large;
+  font-family: monospace;
+  color: black;
+
+}
