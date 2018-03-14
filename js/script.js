@@ -1,6 +1,5 @@
 var toaletter = [
-  {
-    "entries": [{
+    {
         "herre": "1",
         "tid_sondag": "07.00 - 23.15",
         "pissoir_only": "NULL",
@@ -240,9 +239,15 @@ var toaletter = [
         "place": "NORDNES SKOLE",
         "dame": "NULL",
         "longitude": "5.307858"
-    }],
-    "page": 1,
-    "pages": 1,
-    "posts": 15
-}
+    }
 ]
+
+function lastToaletter(arr) {
+  var out = "";
+  var i;
+  for(i = 0; i < arr.length; i++) {
+    out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a>
+    <br>';
+  }
+  document.getElementById("id01").innerHTML = out;
+}
