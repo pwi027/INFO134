@@ -242,12 +242,21 @@ var toaletter = [
     }
 ]
 
-function lastToaletter(arr) {
-  var out = "";
-  var i;
-  for(i = 0; i < arr.length; i++) {
-    out += '<a href="' + arr[i].url + '">' + arr[i].display + '</a>
-    <br>';
-  }
-  document.getElementById("id01").innerHTML = out;
+function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
 }
