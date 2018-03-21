@@ -241,10 +241,9 @@ var toaletterJson = [{
         }]
 
 function parseToalett() {
-//  document.createElement("ol");
   for (var i = 0; i < toaletterJson.length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(toaletterJson[i]["adresse"]);
+    var listItem = document.createTextNode(toaletterJson[i]["plassering"]);
     createList.appendChild(listItem);
     document.getElementById("toalettListe").appendChild(createList);
   }
