@@ -132,12 +132,13 @@ text-decoration: none;
 }
 
 #map {
+  background-color: black;
   height: 80%;
   width: 80%;
   left: 10%;
   top: 10%;
   bottom: 10%;
-  border: 0px solid black;
+  border: 1px solid black;
 }
 
 #overskrift {
