@@ -241,6 +241,7 @@ var toaletterJson = [{
         }]
 
 function parseToalett() {
+//  document.createElement("ol");
   for (var i = 0; i < toaletterJson.length; i++) {
     var createList = document.createElement("li");
     var listItem = document.createTextNode(toaletterJson[i]["adresse"]);
@@ -249,12 +250,3 @@ function parseToalett() {
   }
   console.log(toaletterJson);
 }
-
-
-//function populateToaListe() {
-//var node = document.createElement("li");
-//  var textnode = document.createTextNode(alleToaletter.plassering);
-//  node.appendChild(textnode);
-//  document.getElementById("toaListe").appendChild(node);
-//}
-//
