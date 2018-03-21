@@ -1,305 +1,14 @@
-function toalett(herre, tid_sondag, pissoir_only, stellerom, latitude, tid_hverdag, plassering, tid_lordag, rullestol, adresse, pris, id, place, dame, longitude) {
-  this.herre = herre;
-  this.tid_sondag = tid_sondag;
-  this.pissoir_only = pissoir_only;
-  this.stellerom = stellerom;
-  this.latitude = latitude;
-  this.tid_hverdag = tid_hverdag;
-  this.plassering = plassering;
-  this.tid_lordag = tid_lordag;
-  this.rullestol = rullestol;
-  this.adresse = adresse;
-  this.pris = pris;
-  this.id = id;
-  this.place = place;
-  this.dame = dame;
-  this.longitude = longitude;
-}
-
-var toalett1 =
-    {
-      herre: '1',
-      tid_sondag: '07.00 - 23.15',
-      pissoir_only: 'NULL',
-      stellerom: 'NULL',
-      latitude: '60.388076',
-      tid_hverdag: '07.00 - 23.15',
-      plassering: 'NONNESETER TERMINAL, SØR',
-      tid_lordag: '07.00 - 23.15',
-      rullestol: '1',
-      adresse: 'Lungegårdskaien',
-      pris: '12',
-      id: '1',
-      place: 'NONNESETER TERMINAL, SOUTH',
-      dame: '1',
-      longitude: '5.334937'
-    }
-var toalett2 =
-   {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: 'NULL',
-      latitude: '60.388871',
-      tid_hverdag: '05.30 - 23.50',
-      plassering: 'NONNESETER TERMINAL , NORD',
-      tid_lordag: '07.00 - 23.15',
-      rullestol: '1',
-      adresse: 'Østre Strømkai',
-      pris: '12',
-      id: '2',
-      place: 'NONNESETER TERMINAL , NORTH',
-      dame: '1',
-      longitude: '5.334079'
-    }
-var toalett3 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: 'NULL',
-      latitude: '60.388868',
-      tid_hverdag: '09.00 - 17.00',
-      plassering: 'SKYSS KUNDESENTER',
-      tid_lordag: '09.00 - 15.00',
-      rullestol: '1',
-      adresse: 'Østre Strømkai',
-      pris: '12',
-      id: '3',
-      place: 'SKYSS CUSTOMER CENTRE',
-      dame: '1',
-      longitude: '5.334079'
-    }
-var toalett4 =
-    {
-      herre: '1',
-      tid_sondag: '07.00 - 23.00',
-      pissoir_only: 'NULL',
-      stellerom: 'NULL',
-      latitude: '60.39041',
-      tid_hverdag: '07.00 - 23.00',
-      plassering: 'JERNBANESTASJONEN',
-      tid_lordag: '07.00 - 23.00',
-      rullestol: 'NULL',
-      adresse: 'Strømgaten 4',
-      pris: '10',
-      id: '4',
-      place: 'RAILWAY STATION',
-      dame: '1',
-      longitude: '5.332995'
-    }
-var toalett5 =
-    {
-      herre: '1',
-      tid_sondag: '08.30 - 22.00',
-      pissoir_only: 'NULL',
-      stellerom: '1',
-      latitude: '60.394554',
-      tid_hverdag: '09.00 - 23.00',
-      plassering: 'MATHALLEN',
-      tid_lordag: '08.30 - 22.00',
-      rullestol: '1',
-      adresse: 'Strandkaien 3',
-      pris: '10',
-      id: '5',
-      place: 'FISH MARKET',
-      dame: '1',
-      longitude: '5.324099'
-    }
-var toalett6 =
-    {
-      herre: '1',
-      tid_sondag: '08.00 - 18.00',
-      pissoir_only: 'NULL',
-      stellerom: '',
-      latitude: '60.395432',
-      tid_hverdag: '08.00 - 18.00',
-      plassering: 'STRANDKAITERMINALEN',
-      tid_lordag: '08.00 - 18.00',
-      rullestol: '',
-      adresse: 'Strandkaien',
-      pris: '10',
-      id: '6',
-      place: 'STRANDKAI BOAT TERMINAL',
-      dame: '1',
-      longitude: '5.321034'
-    }
-var toalett7 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: 'NULL',
-      latitude: '60.3913929',
-      tid_hverdag: '08.00 - 15.00',
-      plassering: 'BERGEN KOMMUNE, INNBYGGERSERVICE',
-      tid_lordag: 'NULL',
-      rullestol: '1',
-      adresse: 'Kaigaten 4',
-      pris: '0',
-      id: '7',
-      place: 'CITIZEN SERVICE CENTRE',
-      dame: '1',
-      longitude: '5.326855'
-    }
-var toalett8 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: '1',
-      latitude: '60.3891794',
-      tid_hverdag: '09.00 - 21.00',
-      plassering: 'BERGEN STORSENTER',
-      tid_lordag: '09.00 - 18.00',
-      rullestol: '1',
-      adresse: 'Strømgaten 8',
-      pris: '10',
-      id: '8',
-      place: 'BERGEN STORSENTER',
-      dame: '1',
-      longitude: '5.3305793'
-    }
-var toalett9 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: '1',
-      latitude: '60.392209',
-      tid_hverdag: '09.00 - 21.00',
-      plassering: 'SUNDT MOTEHUS',
-      tid_lordag: '09.00 - 18.00',
-      rullestol: '1',
-      adresse: 'Torgallmenningen 14',
-      pris: '10',
-      id: '9',
-      place: 'SUNDT FASHION HOUSE',
-      dame: '1',
-      longitude: '5.324011'
-    }
-var toalett10 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: '1',
-      latitude: '60.3928444',
-      tid_hverdag: '09.00 - 20.00',
-      plassering: 'XHIBITION',
-      tid_lordag: '09.00 - 18.00',
-      rullestol: '1',
-      adresse: 'Småstrandgaten 3',
-      pris: '10',
-      id: '10',
-      place: 'XHIBITION',
-      dame: '1',
-      longitude: '5.3239541'
-    }
-var toalett11 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: '1',
-      latitude: '60.3947371',
-      tid_hverdag: '09.00 - 21.00',
-      plassering: 'GALLERIET',
-      tid_lordag: '09.00 - 18.00',
-      rullestol: '1',
-      adresse: 'Torgallmenningen 8',
-      pris: '10',
-      id: '11',
-      place: 'GALLERIET',
-      dame: '1',
-      longitude: '5.3243561'
-    }
-var toalett12 =
-    {
-      herre: '1',
-      tid_sondag: 'NULL',
-      pissoir_only: 'NULL',
-      stellerom: '1',
-      latitude: '60.3944194',
-      tid_hverdag: '10.00 - 20.00',
-      plassering: 'KLØVERHUSET',
-      tid_lordag: '10.00 - 18.00',
-      rullestol: '1',
-      adresse: 'Strandgaten 13 -15',
-      pris: '10',
-      id: '12',
-      place: 'KLØVERHUSET',
-      dame: '1',
-      longitude: '5.3205649'
-    }
-var toalett13 =
-    {
-      herre: '1',
-      tid_sondag: '09.00 - 18.00',
-      pissoir_only: 'NULL',
-      stellerom: 'NULL',
-      latitude: '60.3974108',
-      tid_hverdag: '09.00 - 18.00',
-      plassering: 'BRYGGEN BESØKSSENTER',
-      tid_lordag: '09.00 - 18.00',
-      rullestol: '1',
-      adresse: 'Jacobsfjorden, Bryggen',
-      pris: '10',
-      id: '13',
-      place: 'BRYGGEN VISITOR CENTRE',
-      dame: '1',
-      longitude: '5.3222145'
-    }
-var toalett14 =
-    {
-      herre: 'NULL',
-      tid_sondag: 'ALL',
-      pissoir_only: '1',
-      stellerom: 'NULL',
-      latitude: '60.397359',
-      tid_hverdag: 'ALL',
-      plassering: 'C. SUNDTSGT',
-      tid_lordag: 'ALL',
-      rullestol: 'NULL',
-      adresse: 'C. Sundts gt',
-      pris: 'NULL',
-      id: '14',
-      place: 'C. SUNDTSGT',
-      dame: 'NULL',
-      longitude: '5.313963'
-    }
-var toalett15 =
-    {
-      herre: 'NULL',
-      tid_sondag: 'ALL',
-      pissoir_only: '1',
-      stellerom: 'NULL',
-      latitude: '60.397557',
-      tid_hverdag: 'ALL',
-      plassering: 'NORDNES SKOLE',
-      tid_lordag: 'ALL',
-      rullestol: 'NULL',
-      adresse: 'Nordnesparken 3',
-      pris: 'NULL',
-      id: '15',
-      place: 'NORDNES SKOLE',
-      dame: 'NULL',
-      longitude: '5.307858'
-    }
-
-var toaletterJson =
-    {
-        "entries": [{
+var toaletterJson = [{
             "herre": "1",
             "tid_sondag": "07.00 - 23.15",
             "pissoir_only": "NULL",
             "stellerom": "NULL",
             "latitude": "60.388076",
             "tid_hverdag": "07.00 - 23.15",
-            "plassering": "NONNESETER TERMINAL, S�R",
+            "plassering": "NONNESETER TERMINAL, SØR",
             "tid_lordag": "07.00 - 23.15",
             "rullestol": "1",
-            "adresse": "Lungeg�rdskaien",
+            "adresse": "Lungegårdskaien",
             "pris": "12",
             "id": "1",
             "place": "NONNESETER TERMINAL, SOUTH",
@@ -315,7 +24,7 @@ var toaletterJson =
             "plassering": "NONNESETER TERMINAL , NORD",
             "tid_lordag": "07.00 - 23.15",
             "rullestol": "1",
-            "adresse": "�stre Str�mkai",
+            "adresse": "Østre Strømkai",
             "pris": "12",
             "id": "2",
             "place": "NONNESETER TERMINAL , NORTH",
@@ -331,7 +40,7 @@ var toaletterJson =
             "plassering": "SKYSS KUNDESENTER",
             "tid_lordag": "09.00 - 15.00",
             "rullestol": "1",
-            "adresse": "�stre Str�mkai",
+            "adresse": "Østre Strømkai",
             "pris": "12",
             "id": "3",
             "place": "SKYSS CUSTOMER CENTRE",
@@ -347,7 +56,7 @@ var toaletterJson =
             "plassering": "JERNBANESTASJONEN",
             "tid_lordag": "07.00 - 23.00",
             "rullestol": "NULL",
-            "adresse": "Str�mgaten 4",
+            "adresse": "Strømgaten 4",
             "pris": "10",
             "id": "4",
             "place": "RAILWAY STATION",
@@ -472,7 +181,7 @@ var toaletterJson =
             "stellerom": "1",
             "latitude": "60.3944194",
             "tid_hverdag": "10.00 - 20.00",
-            "plassering": "KL�VERHUSET",
+            "plassering": "KLØVERHUSET",
             "tid_lordag": "10.00 - 18.00",
             "rullestol": "1",
             "adresse": "Strandgaten 13 -15",
@@ -488,7 +197,7 @@ var toaletterJson =
             "stellerom": "NULL",
             "latitude": "60.3974108",
             "tid_hverdag": "09.00 - 18.00",
-            "plassering": "BRYGGEN BES�KSSENTER",
+            "plassering": "BRYGGEN BESØKSSENTER",
             "tid_lordag": "09.00 - 18.00",
             "rullestol": "1",
             "adresse": "Jacobsfjorden, Bryggen",
@@ -530,13 +239,15 @@ var toaletterJson =
             "dame": "NULL",
             "longitude": "5.307858"
         }]
-  }
 
 function parseToalett() {
-  var createList = document.createElement("li");
-  var listItem = document.createTextNode(toaletterJson.entries[1]);
-  createList.appendChild(listItem);
-  document.getElementById("toalettListe").appendChild(createList);
+  for (var i = 0; i < toaletterJson.length; i++) {
+    var createList = document.createElement("li");
+    var listItem = document.createTextNode(toaletterJson[i]["adresse"]);
+    createList.appendChild(listItem);
+    document.getElementById("toalettListe").appendChild(createList);
+  }
+  console.log(toaletterJson);
 }
 
 

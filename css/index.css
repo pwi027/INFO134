@@ -62,6 +62,10 @@ body {
   font-size: large;
 }
 
+#toalettListe {
+  width: 60%;
+}
+
 #navitem:hover {
   background-color: #AA11AA;
 }
