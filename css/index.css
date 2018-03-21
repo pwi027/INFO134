@@ -70,10 +70,6 @@ text-decoration: none;
   font-size: large;
 }
 
-#toalettListe {
-  width: 60%;
-}
-
 #navitem:hover {
   background-color: #AA11AA;
 }
@@ -88,6 +84,12 @@ text-decoration: none;
   text-align: center;
   padding: 1em 3em;
   text-decoration: none;
+}
+
+#toalettListe {
+  margin: 0;
+  padding-top: 5em;
+  width: 60%;
 }
 
 .container2{
