@@ -245,7 +245,7 @@ function parseToalett() {
     var createList = document.createElement("li");
     var listItem = document.createTextNode(toaletterJson[i]["plassering"]);
     createList.appendChild(listItem);
-    document.getElementById("toalettListe").appendChild(createList);
+    document.getElementById("toaListe").appendChild(createList);
   }
   console.log(toaletterJson);
 }
