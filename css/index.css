@@ -13,11 +13,6 @@ body {
     letter-spacing: 1.5em;
 }
 
-#bakgrunn{
-  filter: brightness(70%) contrast(170%);
-}
-
-
 /* Centered text */
 #centered {
     position: absolute;
@@ -31,7 +26,34 @@ body {
     text-decoration: overline grey;
 }
 
+#bakgrunn{
+  filter: brightness(70%) contrast(170%);
+}
 
+.centered h1{
+  z-index: 1;
+}
+
+
+#overskrift {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  font-size: x-large;
+  font-family: monospace;
+  color: black;
+}
+
+#map {
+  margin-top: 10px;
+  background-color: black;
+  height: 700px;
+  width: 80%;
+  left: 10%;
+  top: 10%;
+  bottom: 10%;
+}
 
 .bilder{
   background-image: url("img/konsert.jpg");
@@ -131,15 +153,6 @@ text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
-#map {
-  background-color: black;
-  height: 800px;
-  width: 80%;
-  left: 10%;
-  top: 10%;
-  bottom: 10%;
-  border: 1px solid black;
-}
 
 #overskrift {
   position: absolute;
