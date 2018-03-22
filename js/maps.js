@@ -216,7 +216,5 @@ function initMap() {
     title: 'Østre'
   });
 
-
-}
-
 async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap"
+}
