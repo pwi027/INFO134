@@ -1,18 +1,12 @@
+
 function initMap() {
-  var Bergen = {lat: 60.39299, lng: 5.32415};
-  var Landmark = {lat: 60.389704, lng: 5.326552};
-  var Hulen = {lat: 60.384759, lng: 5.325364};
-  var Kvarteret = {lat: 60.389701, lng: 5.322013};
-  var Garage = {lat: 60.389432, lng: 5.323846};
-  var Østre = {lat: 60.393748, lng: 5.328094};
-  var Koengen = {lat: 60.400002, lng: 5.318541};
-  var Verftet = {lat: 60.394722, lng: 5.310569};
 
+var Bergen = {lat: 60.39299, lng: 5.32415};
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: Bergen,
-    styles: [
+var map = new google.maps.Map(document.getElementById('map'), {
+zoom: 14,
+center: Bergen,
+styles: [
 {
 "elementType": "geometry",
 "stylers": [
@@ -173,48 +167,14 @@ function initMap() {
 }
 ]
   });
-
-  var marker = new google.maps.Marker({
-    position: Landmark,
-    map: map,
-    title: 'Landmark'
-  });
-
-  var marker = new google.maps.Marker({
-    position: Hulen,
-    map: map,
-    title: 'Hulen'
-  });
-
-  var marker = new google.maps.Marker({
-    position: Kvarteret,
-    map: map,
-    title: 'Kvarteret'
-  });
-
-  var marker = new google.maps.Marker({
-    position: Garage,
-    map: map,
-    title: 'Garage'
-  });
-
-  var marker = new google.maps.Marker({
-    position: Koengen,
-    map: map,
-    title: 'Koengen'
-  });
-
-  var marker = new google.maps.Marker({
-    position: Verftet,
-    map: map,
-    title: 'Verftet'
-  });
-
-  var marker = new google.maps.Marker({
-    position: Østre,
-    map: map,
-    title: 'Østre'
-  });
-
-async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap"
+  for (var i = 0; i < toaletterJson.length; i++) {
+    var toalettCoordinates = toaletterJson[i];
+    var label = i + 1;
+    var marker = new google.maps.Marker({
+      position: {lat: parseFloat(toaletterJson[i]["latitude"]), lng: parseFloat(toaletterJson[i]["longitude"])},
+      map: map,
+      title: toaletterJson[i]["plassering"],
+      label: label.toString()
+    });
+}
 }

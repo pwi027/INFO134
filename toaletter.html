@@ -9,7 +9,7 @@
     <title>Toaletter</title>
 
   </head>
-  <body>
+  <body onload="parseToalett()">
 
       <ul class="navigation">
          <li id="navitem"><a href="index.html">FORSIDE</a></li>
@@ -33,7 +33,6 @@
 
     <div id="map"></div>
 
-    <body onload="parseToalett()">
       <div id="toalettListe">
         <ol id="toaListe">
         </ol>
@@ -220,6 +219,8 @@ function initMap() {
     });
   }
 }
+
+
 
 </script>
 <script async defer
