@@ -31,6 +31,9 @@
     </div>
     </nav>
 
+
+
+
     <div id="map"></div>
 
       <div id="toalettListe">
@@ -226,5 +229,19 @@ function initMap() {
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap">
 </script>
+
+<div>
+  <form>
+    <input type="radio" name="sex" value="Mann" />Mann
+    <input type="radio" name="sex" value="Dame" />Dame<br>
+    <input type="checkbox" name="rullestoltilgang" value="rullestoltilgang">rullestoltilgang<br>
+    <input type="checkbox" name="åpen_nå" value="åpen_nå">Åpen nå
+    <input type="checkbox" name="stellerom" value="stellerom">Stellerom<br>
+    <input type="checkbox" name="gratis" value="gratis">Gratis<br>
+    <input name="åpningstider"  id="åpningstider"  placeholder="Søk åpningstider" /><br>
+    <input name="maks_pris"  id="maks_pris"  placeholder="Maks pris" />
+    <input type="button" id="search" value="søk" />
+  </form>
+</div>
 </body>
 </html>
