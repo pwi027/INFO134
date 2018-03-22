@@ -9,6 +9,7 @@
 
 
 #toalettListe ol{
+  left: 20px;
   top: 20px;
   position: absolute;
   font-size: 2em;
