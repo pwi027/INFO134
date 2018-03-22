@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+.navigation {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+}
+a {
+font-family: Impact;
+font-size: 24px;
+text-decoration: none;
+}
+
+a:hover {
+color: green;
+text-decoration: none;
+
+}
+
+
+#navitem {
+  float: left;
+  border-right: 5% solid #bbb;
+  font-size: large;
+}
+
+#navitem:hover {
+  background-color: #AA11AA;
+}
+
+#navitem:last-child {
+  border-right: none;
+}
+
+#navitem a {
+  display:block;
+  color:white;
+  text-align: center;
+  padding: 1em 3em;
+  text-decoration: none;
+}

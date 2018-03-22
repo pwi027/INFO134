@@ -1,0 +1,38 @@
+.container2{
+  max-width: 1060px;
+  margin: 0 auto;
+  background: #dddddd;
+  padding: 50px;
+  z-index: 1;
+  background: linear-gradient(white, #cecece, #cecece, white);
+}
+
+
+.bilder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bilder img {
+  width: 700px;
+  height: auto;
+  margin-top: 5%;
+  position: relative;
+  margin: 10px;
+}
+
+.konsert1{
+  margin-top: 5%;
+  text-align: center;
+}
+
+.konsert:hover {
+  background-color: #adadad;
+  color: white;
+}
+
+.konsert, .konsert h1, .konsert p{
+  transition: all 0.2s ease-in-out;
+}
