@@ -1,6 +1,7 @@
 
 /* Container holding the image and the text */
 .container {
+  margin: 0;
     position: relative;
     text-align: center;
     font-family: Arial black;

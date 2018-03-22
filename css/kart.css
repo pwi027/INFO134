@@ -1,20 +1,11 @@
-
-#overskrift {
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, -50%);
-  font-size: x-large;
-  font-family: monospace;
-  color: black;
+.centered h1{
+  font-size: 5em;
+  text-align: center;
 }
 
 #map {
-  margin-top: 10px;
-  background-color: black;
   height: 700px;
   width: 80%;
   left: 10%;
-  top: 10%;
   bottom: 10%;
 }
