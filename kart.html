@@ -200,7 +200,7 @@ function initMap() {
     var marker = new google.maps.Marker({
       position: {lat: parseFloat(toaletterJson[i]["latitude"]), lng: parseFloat(toaletterJson[i]["longitude"])},
       map: map,
-      title: toaletterJson["plassering"],
+      title: toaletterJson[i]["plassering"],
       label: label.toString()
     });
   }
