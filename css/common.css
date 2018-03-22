@@ -4,6 +4,7 @@ body {
   font-family: monospace;
 }
 
+/*Nav-bar som er felles for alle sidene. Representert ved bruk av flex*/
 .navigation {
     width: 100%;
     position: fixed;
@@ -138,15 +139,16 @@ text-decoration: none;
 
 #menu
 {
+  color: black;
   position: absolute;
-  width: 100px;
+  width: 80px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
 
-  background: black;
+  background: white;
   transform: translate(-50%, -50%);
-  opacity: 0.8;
+  opacity: 1;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
 

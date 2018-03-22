@@ -1,14 +1,14 @@
 
-/* Container holding the image and the text */
+/* Container som holder både bakgrunnsbildet og tekst */
 .container {
-  margin: 0;
+    margin: 0;
     position: relative;
     text-align: center;
     font-family: Arial black;
     letter-spacing: 1.5em;
 }
 
-/* Centered text */
+/*Overskrift til forside*/
 #centered {
     position: absolute;
     top: 50%;
@@ -21,20 +21,12 @@
     text-decoration: overline grey;
 }
 
+/*Endring av utseende på bildet. Gjort det noe varmere*/
 #bakgrunn{
   filter: brightness(70%) contrast(170%);
 }
 
-#overskrift {
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%, -50%);
-  font-size: x-large;
-  font-family: monospace;
-  color: black;
-}
-
+/*Endring av størrelsesforhold bilde/tekst ved resizing til mobil*/
 @media only screen and (max-width: 768px){
   #centered{
     font-size: 2em;
@@ -42,20 +34,5 @@
   }
   #bakgrunn{
     margin-top: 3em;
-  }
-  .navigation{
-      flex-direction: column;
-      text-align: left;
-    }
-  .bilder{
-      margin-top: 12%;
-    }
-
-}
-
-@media only screen and (max-width: 968px){
-  .navigation{
-    flex-direction: row;
-    text-align: center;
   }
 }

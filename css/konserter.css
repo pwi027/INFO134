@@ -1,3 +1,13 @@
+/*Container som holder alle bilder og tekst. Bredde noe mindre enn
+totalstørrelse av skjermen for å lage en slags ramme rundt*/
+.overskrift h1{
+  font-family: monospace;
+  position: absolute;
+  top: 30px;
+  left: 600px;
+  margin-top: 55px;
+}
+
 .container2{
   max-width: 1060px;
   margin: 0 auto;
@@ -7,14 +17,17 @@
   background: linear-gradient(white, #cecece, #cecece, white);
 }
 
-
+/*Container som holder bilder og tekst inne i den overordnede rammen.
+Ved bruk av flexbox blir bildene representert i en rad nedover, fra topp til bunn*/
 .bilder{
+  margin-top: 75px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
+/*Funksjon for at størrelsesforhold på alle bilder er like*/
 .bilder img {
   width: 700px;
   height: auto;
@@ -23,16 +36,14 @@
   margin: 10px;
 }
 
-.konsert1{
-  margin-top: 5%;
-  text-align: center;
-}
-
+/*Hover-funksjon når musepekeren beveger seg over bildet. Endrer
+bakgrunnsfarge i hver ramme, og tekst går fra svart til hvit*/
 .konsert:hover {
   background-color: #adadad;
   color: white;
 }
 
+/*Animasjon slik at hover-funksjonen ikke skjer for plutselig*/
 .konsert, .konsert h1, .konsert p{
   transition: all 0.2s ease-in-out;
 }
