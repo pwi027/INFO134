@@ -41,175 +41,175 @@
         </ol>
       </div>
 
-<script src="js/script.js"></script>
-    <script>
-function initMap() {
+          <script src="js/script.js"></script>
+              <script>
+          function initMap() {
 
-  var Bergen = {lat: 60.39299, lng: 5.32415};
+            var Bergen = {lat: 60.39299, lng: 5.32415};
 
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 14,
-    center: Bergen,
-    styles: [
-{
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#f5f5f5"
-  }
-]
-},
-{
-"elementType": "labels.icon",
-"stylers": [
-  {
-    "visibility": "off"
-  }
-]
-},
-{
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#616161"
-  }
-]
-},
-{
-"elementType": "labels.text.stroke",
-"stylers": [
-  {
-    "color": "#f5f5f5"
-  }
-]
-},
-{
-"featureType": "administrative.land_parcel",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#bdbdbd"
-  }
-]
-},
-{
-"featureType": "poi",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#eeeeee"
-  }
-]
-},
-{
-"featureType": "poi",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#757575"
-  }
-]
-},
-{
-"featureType": "poi.park",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#e5e5e5"
-  }
-]
-},
-{
-"featureType": "poi.park",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#9e9e9e"
-  }
-]
-},
-{
-"featureType": "road",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#ffffff"
-  }
-]
-},
-{
-"featureType": "road.arterial",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#757575"
-  }
-]
-},
-{
-"featureType": "road.highway",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#dadada"
-  }
-]
-},
-{
-"featureType": "road.highway",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#616161"
-  }
-]
-},
-{
-"featureType": "road.local",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#9e9e9e"
-  }
-]
-},
-{
-"featureType": "transit.line",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#e5e5e5"
-  }
-]
-},
-{
-"featureType": "transit.station",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#eeeeee"
-  }
-]
-},
-{
-"featureType": "water",
-"elementType": "geometry",
-"stylers": [
-  {
-    "color": "#c9c9c9"
-  }
-]
-},
-{
-"featureType": "water",
-"elementType": "labels.text.fill",
-"stylers": [
-  {
-    "color": "#9e9e9e"
-  }
-]
-}
-]
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: Bergen,
+              styles: [
+                {
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#f5f5f5"
+                  }
+                ]
+                },
+                {
+                "elementType": "labels.icon",
+                "stylers": [
+                  {
+                    "visibility": "off"
+                  }
+                ]
+                },
+                {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#616161"
+                  }
+                ]
+                },
+                {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                  {
+                    "color": "#f5f5f5"
+                  }
+                ]
+                },
+                {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#bdbdbd"
+                  }
+                ]
+                },
+                {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#eeeeee"
+                  }
+                ]
+                },
+                {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#757575"
+                  }
+                ]
+                },
+                {
+                "featureType": "poi.park",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#e5e5e5"
+                  }
+                ]
+                },
+                {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#9e9e9e"
+                  }
+                ]
+                },
+                {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#ffffff"
+                  }
+                ]
+                },
+                {
+                "featureType": "road.arterial",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#757575"
+                  }
+                ]
+                },
+                {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#dadada"
+                  }
+                ]
+                },
+                {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#616161"
+                  }
+                ]
+                },
+                {
+                "featureType": "road.local",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#9e9e9e"
+                  }
+                ]
+                },
+                {
+                "featureType": "transit.line",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#e5e5e5"
+                  }
+                ]
+                },
+                {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#eeeeee"
+                  }
+                ]
+                },
+                {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                  {
+                    "color": "#c9c9c9"
+                  }
+                ]
+                },
+                {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                  {
+                    "color": "#9e9e9e"
+                  }
+                ]
+                }
+          ]
   });
   for (var i = 0; i < toaletterJson.length; i++) {
     var toalettCoordinates = toaletterJson[i];
@@ -229,19 +229,26 @@ function initMap() {
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap">
 </script>
-
+<div id="searchForm">>
 <div>
   <form>
-    <input type="radio" name="kjonn" value="Mann" />Mann
-    <input type="radio" name="kjonn" value="Dame" />Dame<br>
+    <input type="hurtigSok" id="hurtigSok" placeholder="Skriv inn søkeord">
+    <input type="button" id="hurtigSokKnapp" value="Hurtigsok"/><br>
+  </form>
+</div>
+<div>
+  <form>
+    <input type="radio" name="sex" value="Mann" />Mann
+    <input type="radio" name="sex" value="Dame" />Dame<br>
     <input type="checkbox" name="rullestoltilgang" value="rullestoltilgang">Rullestoltilgang<br>
     <input type="checkbox" name="åpen_nå" value="åpen_nå">Åpen nå<br>
     <input type="checkbox" name="stellerom" value="stellerom">Stellerom<br>
     <input type="checkbox" name="gratis" value="gratis">Gratis<br>
     <input name="åpningstider"  id="åpningstider"  placeholder="Søk åpningstider" /><br>
-    <input name="maks_pris"  id="maks_pris"  placeholder="Maks pris"/>
+    <input name="maks_pris"  id="maks_pris"  placeholder="Maks pris" />
     <input type="button" id="search" value="søk" />
   </form>
+</div>
 </div>
 </body>
 </html>
