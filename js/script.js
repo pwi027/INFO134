@@ -252,7 +252,14 @@ function parseToalett() {
 }
 
 function searchToilet() {
-  var input;
-  var filter;
-
+  var resultater = [];
+  var quickSearchForm = document.getElementById("hurtigSok");
+  var quickSearchInput = quickSearchForm.value;
+  for (var i = 0; i < toaletterJson.length; i++) {
+    for(key in toaletterJson[i]) {
+      if(toaletterJson[i][key].indexOf(quickSearchInput)!=-1) {
+        resultater.push(toaletterJson[i]);
+      }
+    }
+  }
 }
