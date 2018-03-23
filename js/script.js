@@ -240,6 +240,7 @@ var toaletterJson = [{
   "longitude": "5.307858"
 }]
 
+// Går igjennom JSON-objektet toaletterJson og itererer ut et <li> element for hver "plassering"-key, under en <ol>
 function parseToalett() {
   for (var i = 0; i < toaletterJson.length; i++) {
     var createList = document.createElement("li");
