@@ -10,7 +10,7 @@
   <title>Toaletter</title>
 
 </head>
-
+<!--Henter data fra JSON-->
 <body onload="parseToalett()">
 
   <ul class="navigation">
@@ -38,13 +38,34 @@
       </ul>
     </div>
   </nav>
-
-
-
-
+  <!--Wrapper som holder alle div-elementer under nav-baren-->
+  <div class="wrapper">
+  <!--Søke-funksjonen over toaletter-->
+  <div id="searchForm">>
+    <div>
+      <form>
+        <input type="hurtigSok" id="hurtigSok" placeholder="Skriv inn søkeord">
+        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" /><br>
+      </form>
+    </div>
+    <!--Alternativer som eksisterer i søke-funksjonen-->
+    <div>
+      <form>
+        <input type="radio" name="sex" value="Mann" />Mann
+        <input type="radio" name="sex" value="Dame" />Dame<br>
+        <input type="checkbox" name="rullestoltilgang" value="rullestoltilgang">Rullestoltilgang<br>
+        <input type="checkbox" name="åpen_nå" value="åpen_nå">Åpen nå<br>
+        <input type="checkbox" name="stellerom" value="stellerom">Stellerom<br>
+        <input type="checkbox" name="gratis" value="gratis">Gratis<br>
+        <input name="åpningstider" id="åpningstider" placeholder="Søk åpningstider" /><br>
+        <input name="maks_pris" id="maks_pris" placeholder="Maks pris" />
+        <input type="button" id="search" value="søk" />
+      </form>
+    </div>
+  </div>
+  <!--Kartet med API-nøkkel til Google maps-->
   <div id="map"></div>
-
-  <div id="toalettListe">
+    <!--Listen over toaletter-->
     <ol id="toaListe">
     </ol>
   </div>
@@ -202,11 +223,14 @@
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap">
   </script>
+<<<<<<< HEAD
+
+=======
   <div id="searchForm">>
     <div>
       <form>
         <input type="hurtigSok" id="hurtigSok" placeholder="Skriv inn søkeord">
-        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" /><br>
+        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" onclick="searchToilet()" /><br>
       </form>
     </div>
     <div>
@@ -219,10 +243,11 @@
         <input type="checkbox" name="gratis" value="gratis">Gratis<br>
         <input name="åpningstider" id="åpningstider" placeholder="Søk åpningstider" /><br>
         <input name="maks_pris" id="maks_pris" placeholder="Maks pris" />
-        <input type="button" id="search" value="søk" />
+        <input type="button" id="search" value="søk" onclick="checkObjectValue()" />
       </form>
     </div>
   </div>
+>>>>>>> 107c73c4a30acc412a7c98f646aff1820172dc3b
 </body>
 
 </html>

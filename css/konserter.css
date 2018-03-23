@@ -1,15 +1,7 @@
 /*Container som holder alle bilder og tekst. Bredde noe mindre enn
 totalstørrelse av skjermen for å lage en slags ramme rundt*/
 
-.overskrift h1 {
-  font-family: monospace;
-  position: absolute;
-  top: 30px;
-  left: 600px;
-  margin-top: 55px;
-}
-
-.container2 {
+.container {
   max-width: 1060px;
   margin: 0 auto;
   background: #dddddd;

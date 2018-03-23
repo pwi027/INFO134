@@ -1,18 +1,32 @@
-#map {
-  position: relative;
-  padding-top: 100px;
-  height: 700px;
-  width: 50%;
-  left: 40%;
-  bottom: 10%;
+/*Wrapper som holder alle div-elementer. Gir marginer på venstre
+og høyre side av skjermen*/
+.wrapper{
+  margin-left: 45px;
+  margin-right: 25px;
+  max-width: 960px;
 }
 
-#toalettListe ol {
-  left: 20px;
-  top: 20px;
+/*Kartet over toaletter i Bergen sentrum*/
+#map {
   position: absolute;
-  font-size: 2em;
-  margin: 0;
-  padding-top: 5em;
+  top: 100px;
+  height: 600px;
+  width: 600px;
+  left: 40%;
+}
+
+/*Listen over toaletter hentet fra JSON-dokumentet*/
+#toaListe{
+  position: absolute;
+  font-size: 1.5em;
+  top: 270px;
   width: 60%;
+}
+
+/*Søke-funksjonen over toaletter*/
+#searchForm{
+  font-size: 1em;
+  left: 20px;
+  top: 60px;
+  position: relative;
 }

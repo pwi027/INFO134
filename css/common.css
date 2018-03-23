@@ -33,6 +33,7 @@ a {
   font-size: large;
 }
 
+/*Hover-effekt når musepekeren går over nav-alternativene*/
 #navitem:hover {
   background-color: #AA11AA;
 }
@@ -49,10 +50,12 @@ a {
   text-decoration: none;
 }
 
+/*"Hamburger"-menyen skal ikke vises før 768px, derfor display:none*/
 #hamburger {
   display: none;
 }
 
+/*"Hamburger"-menyen som dukker opp når skjermen blir mobilstørrelse*/
 @media only screen and (max-width: 768px) {
   #hamburger {
     display: block;
