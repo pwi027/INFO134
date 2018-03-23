@@ -263,3 +263,9 @@ function searchToilet() {
     }
   }
 }
+
+function checkObjectValue() {
+  for(var i = 0; i < toaletterJson.length; i++) {
+    console.log(toaletterJson.values[i]);
+  }
+}
