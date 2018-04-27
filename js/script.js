@@ -269,3 +269,27 @@ function checkObjectValue() {
     console.log(toaletterJson.values[i]);
   }
 }
+
+#oppgave2
+function hentURL(url) {
+  if (receiveURL == JSON) {
+    do function
+  }
+  else {
+    return null
+  }
+}
+
+
+
+var receiveURL = new XMLHttpRequest();
+receiveURL.onreadystatechange = hentURL() {
+  if (this.readyState == 4 && this.status == 200) {
+    #gjør noe her
+  }
+  }
+};
+receiveURL.open("GET", "filename", true);
+receiveURL.send();
+
+}
