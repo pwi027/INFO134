@@ -270,7 +270,7 @@ function checkObjectValue() {
   }
 }
 
-#oppgave2
+// oppgave2
 function hentURL(url) {
   if (receiveURL == JSON) {
     do function
@@ -280,7 +280,7 @@ function hentURL(url) {
   }
 }
 
-
+// finn en callbackfunksjon
 
 var receiveURL = new XMLHttpRequest();
 receiveURL.onreadystatechange = hentURL() {
@@ -293,3 +293,11 @@ receiveURL.open("GET", "filename", true);
 receiveURL.send();
 
 }
+
+// utregning av distanse mellom to koordinater
+// må kanskje lages fra bunnen av istedenfor å bruke Google sin algoritme?
+
+var distanse = google.maps.geometry.spherical.computeDistanceBetween(
+  new google.maps.LatLng(poolat, poolng),
+  new google.maps.LatLng(destlat, destlng)
+);
