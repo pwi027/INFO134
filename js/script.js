@@ -18,8 +18,8 @@ function requestURL(url) {
   return entries;
 }
 
-function parseToalett() {
-  for (var i = 0; i < toaletterJson.length; i++) {
+function parseJson() {
+  for (var i = 0; i < entries.length; i++) {
     var createList = document.createElement("li");
     var listItem = document.createTextNode(toaletterJson[i]["plassering"]);
     createList.appendChild(listItem);
@@ -32,18 +32,18 @@ function searchToilet() {
   var resultater = [];
   var quickSearchForm = document.getElementById("hurtigSok");
   var quickSearchInput = quickSearchForm.value;
-  for (var i = 0; i < toaletterJson.length; i++) {
-    for(key in toaletterJson[i]) {
-      if(toaletterJson[i][key].indexOf(quickSearchInput)!=-1) {
-        resultater.push(toaletterJson[i]);
+  for (var i = 0; i < entries.length; i++) {
+    for(key in entries[i]) {
+      if(entries[i][key].indexOf(quickSearchInput)!=-1) {
+        resultater.push(entries[i]);
       }
     }
   }
 }
 
 function checkObjectValue() {
-  for(var i = 0; i < toaletterJson.length; i++) {
-    console.log(toaletterJson.values[i]);
+  for(var i = 0; i < entries.length; i++) {
+    console.log(entries.values[i]);
   }
 }
 

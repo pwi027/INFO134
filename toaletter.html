@@ -11,7 +11,7 @@
 
 </head>
 <!--Henter data fra JSON-->
-<body onload="parseToalett()">
+<body onload="parseJson()">
 
   <ul class="navigation">
     <li id="navitem"><a href="index.html">FORSIDE</a></li>
@@ -206,16 +206,16 @@
           }
         ]
       });
-      for (var i = 0; i < toaletterJson.length; i++) {
-        var toalettCoordinates = toaletterJson[i];
+      for (var i = 0; i < entries.length; i++) {
+        var toalettCoordinates = entries[i];
         var label = i + 1;
         var marker = new google.maps.Marker({
           position: {
-            lat: parseFloat(toaletterJson[i]["latitude"]),
-            lng: parseFloat(toaletterJson[i]["longitude"])
+            lat: parseFloat(entries[i]["latitude"]),
+            lng: parseFloat(entries[i]["longitude"])
           },
           map: map,
-          title: toaletterJson[i]["plassering"],
+          title: entries[i]["plassering"],
           label: label.toString()
         });
       }
