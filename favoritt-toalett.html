@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <script src="js/script.js"></script>
+  <script src="js/createselector.js"></script>
+  <script src="js/measuredistance.js"></script>
+  <title>Favoritt-toalett</title>
+
+</head>
+<!--Henter data fra JSON-->
+<body>
+
+  <ul class="navigation">
+    <li id="navitem"><a href="index.html">FORSIDE</a></li>
+    <li id="navitem"><a href="konserter.html">KONSERTER</a></li>
+    <li id="navitem"><a href="toaletter.html">TOALETTER</a></li>
+    <li id="navitem"><a href="favoritt-toalett.html">FAVORITT-TOALETT</a></li>
+  </ul>
+
+  <nav id="hamburger">
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="index.html">
+          <li>FORSIDE</li>
+        </a>
+        <a href="konserter.html">
+          <li>KONSERTER</li>
+        </a>
+        <a href="toaletter.html">
+          <li>TOALETTER</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="dassvelger"></div>
+
+  <p id="nærmesteLekeplass"></p>
+
+  <script>
+    var lekeplassData;
+
+    function createSelectorWithData(entries) {
+      for (var i = 0; i < entries.length; i++) {
+        var entry = entries[i];
+        entry.name = entry.adresse;
+      }
+
+      console.log('doData', entries);
+
+      var selector = createSelector(entries);
+      var wrapper = document.getElementById('dassvelger');
+      wrapper.appendChild(selector);
+
+      selector.onchange = function (event) {
+        var id = parseInt(event.target.value);
+        var dass = entries[id - 1];
+
+        var closestPlayground;
+        var closestDistance;
+        for (var j = 0; j < lekeplassData.length; j++){
+          var lekeplass = lekeplassData[j];
+          var distance = measureDistance({
+            lat: parseFloat(dass.latitude),
+            lng: parseFloat(dass.longitude)
+          }, {
+            lat: parseFloat(lekeplass.latitude),
+            lng: parseFloat(lekeplass.longitude)
+          });
+
+          debugger;
+          if (closestPlayground === undefined || distance < closestDistance) {
+            closestPlayground = lekeplass;
+            closestDistance = distance;
+          }
+        }
+        var closestPlaygroundElement = document.getElementById('nærmesteLekeplass');
+
+        var displayDistance = (closestDistance * 1000).toFixed();
+        closestPlaygroundElement.innerHTML = 'Nærmeste lekeplass er ' + closestPlayground.navn + '. Distansen er '
+        + displayDistance + ' meter';
+      };
+    }
+
+    requestURL(dokart, createSelectorWithData);
+    requestURL(lekeplasser, function (entries) {
+      lekeplassData = entries;
+      console.log('lekeplassData', lekeplassData);
+    });
+
+
+  </script>
+
+</body>
+
+</html>

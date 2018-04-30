@@ -30,14 +30,15 @@ function create(tag, attributes) {
 function createSelector(options) {
   var selector = create('select');
 
-  for (var option in options) {
-    var option = create('option', {
+  for (var i = 0; i < options.length; i++) {
+    var option = options[i];
+    var optionElement = create('option', {
       value: option.id
     });
 
-    option.innerHTML = option.name;
+    optionElement.innerHTML = option.name;
 
-    selector.appendChild(option);
+    selector.appendChild(optionElement);
   }
 
   return selector;
