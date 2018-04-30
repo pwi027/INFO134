@@ -1,4 +1,5 @@
 // Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
+
 function requestURL(url) {
   var xhr = new XMLHttpRequest();
   var entries = [];
@@ -21,11 +22,11 @@ function requestURL(url) {
 function parseJson() {
   for (var i = 0; i < entries.length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(toaletterJson[i]["plassering"]);
+    var listItem = document.createTextNode(entries[i]["plassering"]);
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
-  console.log(toaletterJson);
+  console.log(entries);
 }
 
 function searchToilet() {
