@@ -2,6 +2,7 @@
 
 // global variabel for URLen til dokart-JSON
 var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
+var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
 
 
 // Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
