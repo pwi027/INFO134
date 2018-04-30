@@ -1,28 +1,34 @@
 
 
 // global variabel for URLen til dokart-JSON
-global var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
+var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
+var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
 
+var entries = [];
 
 // Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
 // usikker på hvordan man skal håndtere "entries"
-function requestURL(url){
+function requestURL(url) {
   var xhr = new XMLHttpRequest();
-  var entries =[];
+  var entries = [];
   xhr.open("GET", url);
-  xhr.onreadystatechange = function(){
-    if(xhr.readyState === 4 && xhr.status === 200){
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
       console.log("Type", xhr.getResponseHeader("Content-Type"));
       entries = JSON.parse(xhr.responseText).entries;
       console.log(entries);
-      updateArray(entries);
+      oppdater(entries);
     }
-    else{
+    else {
       return null;
     }
   }
     xhr.send();
     return entries;
+}
+
+function oppdater() {
+
 }
 
 //usikker på hvordan man skal håndtere entries
