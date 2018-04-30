@@ -1,7 +1,11 @@
-// Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
 
+
+// global variabel for URLen til dokart-JSON
 global var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
 
+
+// Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
+// usikker på hvordan man skal håndtere "entries"
 function requestURL(url){
   var xhr = new XMLHttpRequest();
   var entries =[];
@@ -21,6 +25,7 @@ function requestURL(url){
     return entries;
 }
 
+//usikker på hvordan man skal håndtere entries
 function parseJson() {
   for (var i = 0; i < entries.length; i++) {
     var createList = document.createElement("li");
