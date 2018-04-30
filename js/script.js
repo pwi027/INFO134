@@ -28,9 +28,9 @@ function requestURL(url) {
 
 //usikker på hvordan man skal håndtere entries
 function parseJson() {
-  for (var i = 0; i < urlEntries.length; i++) {
+  for (var i = 0; i < globalEntries[0].length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(urlEntries[i]["plassering"]);
+    var listItem = document.createTextNode(globalEntries[0][i].plassering);
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
