@@ -204,15 +204,15 @@
           }
         ]
       });
-      for (var i = 0; i < urlEntries.length; i++) {
+      for (var i = 0; i < globalEntries.length; i++) {
         var label = i + 1;
         var marker = new google.maps.Marker({
           position: {
-            lat: parseFloat(urlEntries[i]["latitude"]),
-            lng: parseFloat(urlEntries[i]["longitude"])
+            lat: parseFloat(globalEntries[i]["latitude"]),
+            lng: parseFloat(globalEntries[i]["longitude"])
           },
           map: map,
-          title: urlEntries[i]["plassering"],
+          title: globalEntries[i]["plassering"],
           label: label.toString()
         });
       }

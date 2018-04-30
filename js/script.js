@@ -4,11 +4,12 @@
 var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
 var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
 
-var urlEntries = {};
+var globalEntries = [];
 
 // Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
 // usikker på hvordan man skal håndtere "entries"
 function requestURL(url) {
+  var urlEntries = {};
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url);
   xhr.onreadystatechange = function() {
@@ -22,7 +23,7 @@ function requestURL(url) {
     }
   }
     xhr.send();
-    return urlEntries;
+    globalEntries.push(urlEntries);
 }
 
 //usikker på hvordan man skal håndtere entries
