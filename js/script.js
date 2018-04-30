@@ -60,11 +60,3 @@ function checkObjectValue() {
     console.log(entries.values[i]);
   }
 }
-
-// utregning av distanse mellom to koordinater
-// må kanskje lages fra bunnen av istedenfor å bruke Google sin algoritme?
-
-var distanse = google.maps.geometry.spherical.computeDistanceBetween(
-  new google.maps.LatLng(poolat, poolng),
-  new google.maps.LatLng(destlat, destlng)
-);
