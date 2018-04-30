@@ -1,46 +1,53 @@
-/*Container som holder alle bilder og tekst. Bredde noe mindre enn
-totalstørrelse av skjermen for å lage en slags ramme rundt*/
+/*Container for overskrift*/
+.overskrift {
+  display: flex;
+  position: left;
+  font-size: 22px;
+  margin-left: 3.5%;
+  text-decoration: overline crimson;
+}
 
+/*Container for bilder og tilhørende tekst. Bredde noe mindre enn
+totalstørrelse av skjermen for å lage en slags ramme rundt*/
 .container {
-  max-width: 1060px;
-  margin: 0 auto;
+  display: flex;
+  position: absolute;
   background: #dddddd;
-  padding: 50px;
-  z-index: 1;
   background: linear-gradient(white, #cecece, #cecece, white);
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 /*Container som holder bilder og tekst inne i den overordnede rammen.
 Ved bruk av flexbox blir bildene representert i en rad nedover, fra topp til bunn*/
-
 .bilder {
-  margin-top: 75px;
-  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font size: 90%;
 }
 
 /*Funksjon for at størrelsesforhold på alle bilder er like*/
-
 .bilder img {
-  width: 700px;
-  height: auto;
-  margin-top: 5%;
-  position: relative;
-  margin: 10px;
+  width: 90%;
+  padding: 25px;
 }
 
 /*Hover-funksjon når musepekeren beveger seg over bildet. Endrer
 bakgrunnsfarge i hver ramme, og tekst går fra svart til hvit*/
-
 .konsert:hover {
   background-color: #adadad;
   color: white;
 }
 
 /*Animasjon slik at hover-funksjonen ikke skjer for plutselig*/
-
 .konsert, .konsert h1, .konsert p {
   transition: all 0.2s ease-in-out;
+}
+/*Media query for bedre størrelsesforhold ved mobil*/
+@media only screen (min-width: 768px) and (max-width: 1280px) {
+  .overskrift {
+    font-size: 2px;
+
+  }
 }

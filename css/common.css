@@ -1,14 +1,15 @@
+/*Setter default margin og padding til 0, og font til "Futura"*/
 body {
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: "Futura";
 }
 
 /*Nav-bar som er felles for alle sidene. Representert ved bruk av flex*/
 
 .navigation {
   width: 100%;
-  position: fixed;
+  position: fixed top;
   z-index: 1;
   display: flex;
   flex-direction: row;
