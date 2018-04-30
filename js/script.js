@@ -17,13 +17,13 @@ function requestURL(url) {
       console.log("Type", xhr.getResponseHeader("Content-Type"));
       urlEntries = JSON.parse(xhr.responseText).entries;
       console.log(urlEntries);
+      globalEntries.push(urlEntries);
     }
     else {
       return null;
     }
   }
     xhr.send();
-    globalEntries.push(urlEntries);
 }
 
 //usikker på hvordan man skal håndtere entries
