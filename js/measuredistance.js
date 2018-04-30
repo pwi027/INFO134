@@ -17,14 +17,14 @@ function measureDistance(coord1, coord2) {
   // Jordklodens ca. radius
   var r = 6371;
   var x1 = coord1.lat - coord2.lat;
-  var x2 = coord1.lon - coord2.lon;
+  var x2 = coord1.lng - coord2.lng;
   var latDistance = degreesToRadians(x1);
-  var lonDistance = degreesToRadians(x2);
+  var lngDistance = degreesToRadians(x2);
 
   // Haversine-formel konvertert til JavaScript
   var a = Math.pow(Math.sin(latDistance / 2), 2) +
           Math.cos(degreesToRadians(coord1.lat)) * Math.cos(degreesToRadians(coord2.lat)) *
-          Math.pow(Math.sin(lonDistance / 2), 2);
+          Math.pow(Math.sin(lngDistance / 2), 2);
 
   var b = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   var c = r * b;
@@ -35,8 +35,8 @@ function measureDistance(coord1, coord2) {
 // Skriver avstanden mellom to koordinater (i km) til terminal
 console.log(measureDistance({
   lat: 55,
-  lon: 24
+  lng: 24
 }, {
   lat: 60,
-  lon: 30
+  lng: 30
 }));
