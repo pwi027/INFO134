@@ -8,15 +8,16 @@ var globalEntries = [];
 
 // Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
 // usikker på hvordan man skal håndtere "entries"
-function requestURL(url) {
+function requestURL(url, callback) {
   var urlEntries = {};
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
-      console.log("Type", xhr.getResponseHeader("Content-Type"));
       urlEntries = JSON.parse(xhr.responseText).entries;
-      console.log(urlEntries);
+      if (typeof callback === 'function') {
+        callback(urlEntries);
+      }
     }
     else {
       return null;
