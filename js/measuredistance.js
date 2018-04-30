@@ -10,7 +10,7 @@ function degreesToRadians(degrees) {
  *
  * @param {object} coord1 det første koordinatet
  * @param {object} coord2 det andre koordinatet
- * @returns {number} avstanden mellom koordinatene i meter
+ * @returns {number} avstanden mellom koordinatene i kilometer
  */
 function measureDistance(coord1, coord2) {
 
@@ -21,6 +21,7 @@ function measureDistance(coord1, coord2) {
   var latDistance = degreesToRadians(x1);
   var lonDistance = degreesToRadians(x2);
 
+  // Haversine-formel konvertert til JavaScript
   var a = Math.pow(Math.sin(latDistance / 2), 2) +
           Math.cos(degreesToRadians(coord1.lat)) * Math.cos(degreesToRadians(coord2.lat)) *
           Math.pow(Math.sin(lonDistance / 2), 2);
@@ -31,6 +32,7 @@ function measureDistance(coord1, coord2) {
   return c;
 }
 
+// Skriver avstanden mellom to koordinater (i km) til terminal
 console.log(measureDistance({
   lat: 55,
   lon: 24
