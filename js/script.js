@@ -27,23 +27,22 @@ function requestURL(url) {
 
 //usikker på hvordan man skal håndtere entries
 function parseJson() {
-  for (var i = 0; i < entries.length; i++) {
+  for (var i = 0; i < urlEntries.length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(entries[i]["plassering"]);
+    var listItem = document.createTextNode(urlEntries[i]["plassering"]);
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
-  console.log(entries);
 }
 
 function searchToilet() {
   var resultater = [];
   var quickSearchForm = document.getElementById("hurtigSok");
   var quickSearchInput = quickSearchForm.value;
-  for (var i = 0; i < entries.length; i++) {
-    for(key in entries[i]) {
-      if(entries[i][key].indexOf(quickSearchInput)!=-1) {
-        resultater.push(entries[i]);
+  for (var i = 0; i < urlEntries.length; i++) {
+    for(key in urlEntries[i]) {
+      if(urlEntries[i][key].indexOf(quickSearchInput)!=-1) {
+        resultater.push(urlEntries[i]);
       }
     }
   }
