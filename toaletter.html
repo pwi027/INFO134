@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/toaletter.css">
   <link rel="stylesheet" type="text/css" href="css/common.css">
-  <link rel="javascript" type="text/javascript" href="js/script.js">
+  <script src="js/script.js"></script>
   <title>Toaletter</title>
 
 </head>
@@ -205,15 +205,15 @@
           }
         ]
       });
-      for (var i = 0; i < globalEntries.length; i++) {
+      for (var i = 0; i < globalEntries[0].length; i++) {
         var label = i + 1;
         var marker = new google.maps.Marker({
           position: {
-            lat: parseFloat(globalEntries[i]["latitude"]),
-            lng: parseFloat(globalEntries[i]["longitude"])
+            lat: parseFloat(globalEntries[0][i].latitude),
+            lng: parseFloat(globalEntries[0][i].longitude)
           },
           map: map,
-          title: globalEntries[i]["plassering"],
+          title: globalEntries[0][i].plassering,
           label: label.toString()
         });
       }

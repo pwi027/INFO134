@@ -15,6 +15,8 @@ function requestURL(url, callback) {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       urlEntries = JSON.parse(xhr.responseText).entries;
+      console.log(urlEntries);
+      globalEntries.push(urlEntries);
       if (typeof callback === 'function') {
         callback(urlEntries);
       }
@@ -24,14 +26,13 @@ function requestURL(url, callback) {
     }
   }
     xhr.send();
-    globalEntries.push(urlEntries);
 }
 
 //usikker på hvordan man skal håndtere entries
 function parseJson() {
-  for (var i = 0; i < urlEntries.length; i++) {
+  for (var i = 0; i < globalEntries[0].length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(urlEntries[i]["plassering"]);
+    var listItem = document.createTextNode(globalEntries[0][i].plassering);
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
