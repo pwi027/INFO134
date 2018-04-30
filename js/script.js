@@ -240,7 +240,27 @@ var toaletterJson = [{
   "longitude": "5.307858"
 }]
 
-// Går igjennom JSON-objektet toaletterJson og itererer ut et <li> element for hver "plassering"-key, under en <ol>
+// Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
+
+function requestURL(url) {
+  var xhr = new XMLHttpRequest();
+  var entries = [];
+  xhr.open("GET", url);
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState === 4 && xhr.status === 200){
+      console.log("Type", xhr.getResponseHeader("Content-Type"));
+      entries = JSON.parse(xhr.responseText).entries;
+      console.log(entries);
+      updateArray(entries);
+    }
+    else {
+      return null;
+    }
+  }
+  xhr.send();
+  return entries;
+}
+
 function parseToalett() {
   for (var i = 0; i < toaletterJson.length; i++) {
     var createList = document.createElement("li");
@@ -268,30 +288,6 @@ function checkObjectValue() {
   for(var i = 0; i < toaletterJson.length; i++) {
     console.log(toaletterJson.values[i]);
   }
-}
-
-// oppgave2
-function hentURL(url) {
-  if (receiveURL == JSON) {
-    do function
-  }
-  else {
-    return null
-  }
-}
-
-// finn en callbackfunksjon
-
-var receiveURL = new XMLHttpRequest();
-receiveURL.onreadystatechange = hentURL() {
-  if (this.readyState == 4 && this.status == 200) {
-    #gjør noe her
-  }
-  }
-};
-receiveURL.open("GET", "filename", true);
-receiveURL.send();
-
 }
 
 // utregning av distanse mellom to koordinater
