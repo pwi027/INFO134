@@ -11,7 +11,7 @@
 
 </head>
 <!--Henter data fra JSON-->
-<body onload="requestURL(dokart)">
+<body onload="requestURL(dokart)"; "parseJson()">
 
   <ul class="navigation">
     <li id="navitem"><a href="index.html">FORSIDE</a></li>
@@ -73,12 +73,10 @@
   <script src="js/script.js"></script>
   <script>
     function initMap() {
-
       var Bergen = {
         lat: 60.39299,
         lng: 5.32415
       };
-
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 14,
         center: Bergen,
@@ -206,16 +204,16 @@
           }
         ]
       });
-      for (var i = 0; i < entries.length; i++) {
-        var toalettCoordinates = entries[i];
+      for (var i = 0; i < urlEntries.length; i++) {
+        var toalettCoordinates = urlEntries[i];
         var label = i + 1;
         var marker = new google.maps.Marker({
           position: {
-            lat: parseFloat(entries[i]["latitude"]),
-            lng: parseFloat(entries[i]["longitude"])
+            lat: parseFloat(urlEntries[i]["latitude"]),
+            lng: parseFloat(urlEntries[i]["longitude"])
           },
           map: map,
-          title: entries[i]["plassering"],
+          title: urlEntries[i]["plassering"],
           label: label.toString()
         });
       }
