@@ -4,6 +4,8 @@
 var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
 var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
 
+
+// globalt array som får pushet data fra requestURL-funksjonen
 var globalEntries = [];
 
 // Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format. Returnerer null
@@ -34,7 +36,7 @@ function requestURL(url, callback) {
 function parseJson() {
   for (var i = 0; i < globalEntries[0].length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(globalEntries[0][i]["plassering"]);
+    var listItem = document.createTextNode(globalEntries[0][i].plassering);
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
