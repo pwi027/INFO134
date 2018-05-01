@@ -6,8 +6,9 @@ var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
 
 var globalEntries = [];
 
-// Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format (Oppgave 2)
-// usikker på hvordan man skal håndtere "entries"
+// Funksjon som tar imot en URL og parser hvis dokumentet er i JSON-format. Returnerer null
+// hvis readyState ikke er 4 og status ikke er 200. Ellers pusher den parset JSON inn i den
+// globale variabelen globalEntries
 function requestURL(url, callback) {
   var urlEntries = {};
   var xhr = new XMLHttpRequest();
@@ -28,7 +29,8 @@ function requestURL(url, callback) {
     xhr.send();
 }
 
-//usikker på hvordan man skal håndtere entries
+// Funksjon som går igjennom globalEntries-arrayet og iterer ut liste-elementer for hver med
+// plasseringen til hver enkelte node
 function parseJson() {
   for (var i = 0; i < globalEntries[0].length; i++) {
     var createList = document.createElement("li");
@@ -39,6 +41,7 @@ function parseJson() {
   console.log(globalEntries);
 }
 
+// Funksjon som tar imot tekst i søkefeltene og sjekker mot verdiene i globalEntries
 function searchToilet() {
   var resultater = [];
   var quickSearchForm = document.getElementById("hurtigSok");
