@@ -32,20 +32,21 @@ function requestURL(url, callback) {
 function parseJson() {
   for (var i = 0; i < globalEntries[0].length; i++) {
     var createList = document.createElement("li");
-    var listItem = document.createTextNode(globalEntries[0][i].plassering);
+    var listItem = document.createTextNode(globalEntries[0][i]["plassering"]);
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
+  console.log(globalEntries);
 }
 
 function searchToilet() {
   var resultater = [];
   var quickSearchForm = document.getElementById("hurtigSok");
   var quickSearchInput = quickSearchForm.value;
-  for (var i = 0; i < urlEntries.length; i++) {
-    for(key in urlEntries[i]) {
-      if(urlEntries[i][key].indexOf(quickSearchInput)!=-1) {
-        resultater.push(urlEntries[i]);
+  for (var i = 0; i < globalEntries.length; i++) {
+    for(key in globalEntries[i]) {
+      if(globalEntries[i][key].indexOf(quickSearchInput)!=-1) {
+        resultater.push(globalEntries[i]);
       }
     }
   }
