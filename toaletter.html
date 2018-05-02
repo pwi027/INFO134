@@ -206,18 +206,20 @@
           }
         ]
       });
-      for (var i = 0; i < globalEntries.length; i++) {
-        var label = i + 1;
-        var marker = new google.maps.Marker({
-          position: {
-            lat: parseFloat(globalEntries[0][i].latitude),
-            lng: parseFloat(globalEntries[0][i].longitude)
-          },
-          map: map,
-          title: globalEntries[0][i].plassering,
-          label: label.toString()
-        });
-      }
+      requestURL(dokart, function(items) {
+        for (var i = 0; i < items.length; i++) {
+          var label = i + 1;
+          var marker = new google.maps.Marker({
+            position: {
+              lat: parseFloat(items[i].latitude),
+              lng: parseFloat(items[i].longitude)
+            },
+            map: map,
+            title: items[i].plassering,
+            label: label.toString()
+          });
+        }
+      });
     }
     var list = document.getElementById('toaListe');
     requestURL(dokart, function(items) {
@@ -228,9 +230,9 @@
   </script>
   <div id="searchForm">
     <div>
-      <form onload="searchToilet()">
-        <input type="hurtigSok" id="hurtigSok" placeholder="Skriv inn søkeord">
-        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" onclick="searchToilet()" /><br>
+      <form>
+        <input type="text" id="hurtigSok" placeholder="Skriv inn søkeord">
+        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" onclick="searchToilet(toilets)" />
       </form>
     </div>
     <div>
