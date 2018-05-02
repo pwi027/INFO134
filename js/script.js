@@ -57,6 +57,8 @@ function searchToilet() {
   console.log(resultater);
 }
 
+// Funksjon som sorterer listofItems enten alfabetisk eller i revers, avhengig av hvilket valg
+// man tar i drop-down menyen arraySelect
 function arraySort() {
   var selectedChoice = document.getElementById("arraySelect").value;
   if(selectedChoice == "Alfabetisk") {
