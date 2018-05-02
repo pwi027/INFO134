@@ -22,8 +22,7 @@ function requestURL(url, callback) {
       if (typeof callback === 'function') {
         callback(urlEntries);
       }
-    }
-    else {
+    } else {
       return null;
     }
   }
@@ -32,14 +31,13 @@ function requestURL(url, callback) {
 
 // Funksjon som går igjennom globalEntries-arrayet og iterer ut liste-elementer for hver med
 // plasseringen til hver enkelte node
-function parseJson() {
-  for (var i = 0; i < globalEntries[0].length; i++) {
-    var createList = document.createElement("li");
-    var listItem = document.createTextNode(globalEntries[0][i].plassering);
-    createList.appendChild(listItem);
-    document.getElementById("listofItems").appendChild(createList);
+function parseJson(items, listToAppendTo, propertyToDisplay) {
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    var listElement = document.createElement('li');
+    listElement.innerHTML = item[propertyToDisplay];
+    listToAppendTo.appendChild(listElement);
   }
-  console.log(globalEntries[0][i].plassering);
 }
 
 // Funksjon som tar imot tekst i søkefeltet hurtigSok og sjekker mot verdiene i globalEntries
@@ -48,8 +46,8 @@ function searchToilet() {
   var quickSearchForm = document.getElementById("hurtigSok");
   var quickSearchInput = quickSearchForm.value;
   for (var i = 0; i < globalEntries[0].length; i++) {
-    for(key in globalEntries[0][i]) {
-      if(globalEntries[0][i][key].indexOf(quickSearchInput)!=-1) {
+    for (key in globalEntries[0][i]) {
+      if (globalEntries[0][i][key].indexOf(quickSearchInput) != -1) {
         resultater.push(globalEntries[0][i]);
       }
     }
@@ -61,7 +59,7 @@ function searchToilet() {
 // man tar i drop-down menyen arraySelect
 function arraySort() {
   var selectedChoice = document.getElementById("arraySelect").value;
-  if(selectedChoice == "Alfabetisk") {
+  if (selectedChoice == "Alfabetisk") {
     globalEntries.sort();
   } else if (selectedChoice == "Revers") {
     globalEntries.reverse();

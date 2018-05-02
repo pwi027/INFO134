@@ -11,7 +11,8 @@
 
 </head>
 <!--Henter data fra JSON-->
-<body onload="requestURL(dokart)"; "parseJson()">
+
+<body>
 
   <ul class="navigation">
     <li id="navitem"><a href="index.html">FORSIDE</a></li>
@@ -41,31 +42,31 @@
   </nav>
   <!--Wrapper som holder alle div-elementer under nav-baren-->
   <div class="wrapper">
-  <!--Søke-funksjonen over toaletter-->
-  <div id="searchForm">
-    <div>
-      <form>
-        <input type="hurtigSok" id="hurtigSok" placeholder="Skriv inn søkeord">
-        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" /><br>
-      </form>
+    <!--Søke-funksjonen over toaletter-->
+    <div id="searchForm">
+      <div>
+        <form>
+          <input type="hurtigSok" id="hurtigSok" placeholder="Skriv inn søkeord">
+          <input type="button" id="hurtigSokKnapp" value="Hurtigsok" /><br>
+        </form>
+      </div>
+      <!--Alternativer som eksisterer i søke-funksjonen-->
+      <div>
+        <form>
+          <input type="radio" name="sex" value="Mann" />Mann
+          <input type="radio" name="sex" value="Dame" />Dame<br>
+          <input type="checkbox" name="rullestoltilgang" value="rullestoltilgang">Rullestoltilgang<br>
+          <input type="checkbox" name="åpen_nå" value="åpen_nå">Åpen nå<br>
+          <input type="checkbox" name="stellerom" value="stellerom">Stellerom<br>
+          <input type="checkbox" name="gratis" value="gratis">Gratis<br>
+          <input name="åpningstider" id="åpningstider" placeholder="Søk åpningstider" /><br>
+          <input name="maks_pris" id="maks_pris" placeholder="Maks pris" />
+          <input type="button" id="search" value="søk" />
+        </form>
+      </div>
     </div>
-    <!--Alternativer som eksisterer i søke-funksjonen-->
-    <div>
-      <form>
-        <input type="radio" name="sex" value="Mann" />Mann
-        <input type="radio" name="sex" value="Dame" />Dame<br>
-        <input type="checkbox" name="rullestoltilgang" value="rullestoltilgang">Rullestoltilgang<br>
-        <input type="checkbox" name="åpen_nå" value="åpen_nå">Åpen nå<br>
-        <input type="checkbox" name="stellerom" value="stellerom">Stellerom<br>
-        <input type="checkbox" name="gratis" value="gratis">Gratis<br>
-        <input name="åpningstider" id="åpningstider" placeholder="Søk åpningstider" /><br>
-        <input name="maks_pris" id="maks_pris" placeholder="Maks pris" />
-        <input type="button" id="search" value="søk" />
-      </form>
-    </div>
-  </div>
-  <!--Kartet med API-nøkkel til Google maps-->
-  <div id="map"></div>
+    <!--Kartet med API-nøkkel til Google maps-->
+    <div id="map"></div>
     <!--Listen over toaletter-->
     <ol id="toaListe">
     </ol>
@@ -205,7 +206,7 @@
           }
         ]
       });
-      for (var i = 0; i < globalEntries[0].length; i++) {
+      for (var i = 0; i < globalEntries.length; i++) {
         var label = i + 1;
         var marker = new google.maps.Marker({
           position: {
@@ -218,6 +219,10 @@
         });
       }
     }
+    var list = document.getElementById('toaListe');
+    requestURL(dokart, function(items) {
+      parseJson(items, list, 'plassering');
+    });
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap">
   </script>
