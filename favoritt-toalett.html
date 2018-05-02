@@ -48,6 +48,7 @@
   <script>
     var lekeplassData;
 
+    
     function createSelectorWithData(entries) {
       for (var i = 0; i < entries.length; i++) {
         var entry = entries[i];
@@ -62,15 +63,15 @@
 
       selector.onchange = function (event) {
         var id = parseInt(event.target.value);
-        var dass = entries[id - 1];
+        var toalett = entries[id - 1];
 
         var closestPlayground;
         var closestDistance;
         for (var j = 0; j < lekeplassData.length; j++){
           var lekeplass = lekeplassData[j];
           var distance = measureDistance({
-            lat: parseFloat(dass.latitude),
-            lng: parseFloat(dass.longitude)
+            lat: parseFloat(toalett.latitude),
+            lng: parseFloat(toalett.longitude)
           }, {
             lat: parseFloat(lekeplass.latitude),
             lng: parseFloat(lekeplass.longitude)
@@ -84,6 +85,8 @@
         }
         var closestPlaygroundElement = document.getElementById('nærmesteLekeplass');
 
+        //Skriver ut hvilken lekeplass som er nærmest i forhold til hvilket toalett
+        //man velger, og .toFixed runder av til nærmeste meter uten desimaler
         var displayDistance = (closestDistance * 1000).toFixed();
         closestPlaygroundElement.innerHTML = 'Nærmeste lekeplass er ' + closestPlayground.navn + '. Distansen er '
         + displayDistance + ' meter';
