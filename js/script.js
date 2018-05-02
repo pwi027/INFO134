@@ -27,7 +27,7 @@ function requestURL(url, callback) {
       return null;
     }
   }
-    xhr.send();
+  xhr.send();
 }
 
 // Funksjon som går igjennom globalEntries-arrayet og iterer ut liste-elementer for hver med
@@ -59,4 +59,9 @@ function searchToilet() {
 
 function arraySort() {
   var selectedChoice = document.getElementById("arraySelect").value;
+  if(selectedChoice == "Alfabetisk") {
+    globalEntries.sort();
+  } else if (selectedChoice == "Revers") {
+    globalEntries.reverse();
+  }
 }
