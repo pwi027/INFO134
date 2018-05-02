@@ -6,7 +6,6 @@ body {
 }
 
 /*Nav-bar som er felles for alle sidene. Representert ved bruk av flex*/
-
 .navigation {
   width: 100%;
   position: fixed top;
@@ -36,7 +35,7 @@ a {
 
 /*Hover-effekt når musepekeren går over nav-alternativene*/
 #navitem:hover {
-  background-color: #AA11AA;
+  background-color: crimson;
 }
 
 #navitem:last-child {
