@@ -1,5 +1,3 @@
-
-
 // global variabel for URLen til dokart-JSON
 var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
 var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
@@ -39,7 +37,7 @@ function parseJson() {
     var createList = document.createElement("li");
     var listItem = document.createTextNode(globalEntries[0][i].plassering);
     createList.appendChild(listItem);
-    document.getElementById("toaListe").appendChild(createList);
+    document.getElementById("listofItems").appendChild(createList);
   }
   console.log(globalEntries[0][i].plassering);
 }
@@ -57,4 +55,8 @@ function searchToilet() {
     }
   }
   console.log(resultater);
+}
+
+function arraySort() {
+  var selectedChoice = document.getElementById("arraySelect").value;
 }
