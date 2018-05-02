@@ -3,6 +3,7 @@
 // global variabel for URLen til dokart-JSON
 var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
 var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
+var uibLocations = "https://tp.data.uib.no/KEYyze4evyqy/ws/room/2.0/buildings.php?id=O2"
 
 
 // globalt array som får pushet data fra requestURL-funksjonen
@@ -43,33 +44,17 @@ function parseJson() {
   console.log(globalEntries[0][i].plassering);
 }
 
-// Funksjon som tar imot tekst i søkefeltene og sjekker mot verdiene i globalEntries
+// Funksjon som tar imot tekst i søkefeltet hurtigSok og sjekker mot verdiene i globalEntries
 function searchToilet() {
   var resultater = [];
   var quickSearchForm = document.getElementById("hurtigSok");
   var quickSearchInput = quickSearchForm.value;
-  for (var i = 0; i < globalEntries.length; i++) {
-    for(key in globalEntries[i]) {
-      if(globalEntries[i][key].indexOf(quickSearchInput)!=-1) {
-        resultater.push(globalEntries[i]);
+  for (var i = 0; i < globalEntries[0].length; i++) {
+    for(key in globalEntries[0][i]) {
+      if(globalEntries[0][i][key].indexOf(quickSearchInput)!=-1) {
+        resultater.push(globalEntries[0][i]);
       }
     }
   }
   console.log(resultater);
-}
-
-function quickSearch() {
-  var searchElement = document.getElementById("hurtigSok");
-  var quickSearchValue = searchElement.value;
-  for (i = 0; i < globalEntries[0]; i++) {
-    quickSearchValue.match(globalEntries[0]);
-  }
-}
-
-function advancedSearch(array, search) {
-  return array.filter(function (a) {
-    return Object.keys(search).every(function (k){
-      return !search[k] || a[k].toLowerCase().indexOf(search[k].toLowerCase()) !== -1;
-    });
-  });
 }
