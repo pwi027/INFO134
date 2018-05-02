@@ -4,7 +4,8 @@
   <script src="js/script.js"></script>
   <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>
-<body onload="requestURL(uibLocations)">
+<body>
+
   <form>
     Hvilken måte vil du sortere listen på?
     <select id="arraySelect">
@@ -17,5 +18,11 @@
     <ol id="listofItems">
     </ol>
   </div>
+  <script>
+  var uibList = document.getElementById("listofItems");
+  requestURL(uibLocations, function(items){
+    parseJson(items, uibList, 'name')
+  });
+  </script>
 </body>
 </html>
