@@ -29,8 +29,7 @@ function requestURL(url, callback) {
   xhr.send();
 }
 
-// Funksjon som går igjennom globalEntries-arrayet og iterer ut liste-elementer for hver med
-// plasseringen til hver enkelte node
+// Funksjon som itererer ut en property og inn i liste-elementet i HTML
 function parseJson(items, listToAppendTo, propertyToDisplay) {
   for (var i = 0; i < items.length; i++) {
     var item = items[i];
