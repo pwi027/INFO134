@@ -40,7 +40,7 @@ function parseJson() {
     createList.appendChild(listItem);
     document.getElementById("toaListe").appendChild(createList);
   }
-  console.log(globalEntries);
+  console.log(globalEntries[0][i].plassering);
 }
 
 // Funksjon som tar imot tekst i søkefeltene og sjekker mot verdiene i globalEntries
@@ -55,10 +55,21 @@ function searchToilet() {
       }
     }
   }
+  console.log(resultater);
 }
 
-function checkObjectValue() {
-  for(var i = 0; i < entries.length; i++) {
-    console.log(entries.values[i]);
+function quickSearch() {
+  var searchElement = document.getElementById("hurtigSok");
+  var quickSearchValue = searchElement.value;
+  for (i = 0; i < globalEntries[0]; i++) {
+    quickSearchValue.match(globalEntries[0]);
   }
+}
+
+function advancedSearch(array, search) {
+  return array.filter(function (a) {
+    return Object.keys(search).every(function (k){
+      return !search[k] || a[k].toLowerCase().indexOf(search[k].toLowerCase()) !== -1;
+    });
+  });
 }
