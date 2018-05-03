@@ -1,6 +1,3 @@
-// Oppgave 7)​ Definer en JavaScript-funksjon som tar to koordinater som parametre og regner ut avstanden
-// mellom dem. Der er helt i orden å anta at verden (i hvert fall Bergen) er flat i denne oppgaven.
-
 function degreesToRadians(degrees) {
   return degrees * Math.PI / 180;
 }
