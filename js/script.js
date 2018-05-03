@@ -1,4 +1,4 @@
-// global variabel for URLen til dokart-JSON
+// Globale variabler for å gjøre det enklere enn å skrive direkte inn URLen
 var dokart = "https://hotell.difi.no/api/json/bergen/dokart";
 var lekeplasser = "https://hotell.difi.no/api/json/bergen/lekeplasser";
 var uibLocations = "https://tp.data.uib.no/KEYyze4evyqy/ws/room/2.0/buildings.php?id=O2"
