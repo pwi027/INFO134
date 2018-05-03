@@ -1,7 +1,6 @@
 /* Container for bakgrunnsbilde og tekst */
 .container {
   display: flex;
-  margin: 0;
   text-align: center;
   letter-spacing: 1.25em;
 }
@@ -19,13 +18,13 @@
   top: 30%;
   left: 10%;
   right: 10%;
-  font-size: 12.5vh;
+  font-size: 4.5em;
   text-decoration: overline crimson;
 }
 
 /*Endring av størrelsesforhold bilde/tekst ved resizing til mobil*/
 @media only screen (min-width: 768px) and (max-width: 1280px) {
   #centered {
-    /*font-size: 2em;*/
+    font-size: 2em;
     /*margin-top: 1em;*/
   }
