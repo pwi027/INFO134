@@ -30,7 +30,8 @@ Ved bruk av flexbox blir bildene representert i en rad nedover, fra topp til bun
 /*Funksjon for at størrelsesforhold på alle bilder er like*/
 .bilder img {
   width: 90%;
-  padding: 25px;
+  padding-top: 25px;
+  padding-right: : 25px;
 }
 
 /*Hover-funksjon når musepekeren beveger seg over bildet. Endrer
