@@ -228,7 +228,27 @@
   </script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuVLxQGcWI91xujnPjh1NsfEDLK6X-jU&callback=initMap">
   </script>
-
+  <div id="searchForm">
+    <div>
+      <form>
+        <input type="text" id="hurtigSok" placeholder="Skriv inn søkeord">
+        <input type="button" id="hurtigSokKnapp" value="Hurtigsok" onclick="searchToilet(toilets)" />
+      </form>
+    </div>
+    <div>
+      <form>
+        <input type="radio" name="sex" value="Mann" />Mann
+        <input type="radio" name="sex" value="Dame" />Dame<br>
+        <input type="checkbox" name="rullestoltilgang" value="rullestoltilgang">Rullestoltilgang<br>
+        <input type="checkbox" name="åpen_nå" value="åpen_nå">Åpen nå<br>
+        <input type="checkbox" name="stellerom" value="stellerom">Stellerom<br>
+        <input type="checkbox" name="gratis" value="gratis">Gratis<br>
+        <input name="åpningstider" id="åpningstider" placeholder="Søk åpningstider" /><br>
+        <input name="maks_pris" id="maks_pris" placeholder="Maks pris" />
+        <input type="button" id="search" value="søk" onclick="checkObjectValue()" />
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
