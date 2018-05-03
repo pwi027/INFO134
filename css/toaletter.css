@@ -1,32 +1,42 @@
 /*Wrapper som holder alle div-elementer. Gir marginer på venstre
 og høyre side av skjermen*/
 .wrapper{
-  margin-left: 45px;
-  margin-right: 25px;
-  max-width: 960px;
+  display: flex;
+  position: absolute;
+  margin-left: 3.5%;
+  width: 100%;
+  height: 100%;
+
 }
 
 /*Kartet over toaletter i Bergen sentrum*/
 #map {
-  position: absolute;
-  top: 100px;
   height: 600px;
   width: 600px;
-  left: 40%;
+  margin-left: 25%;
+}
+
+#overskrift {
+  position: left;
+  font-size: 22px;
+  text-decoration: overline crimson;
 }
 
 /*Listen over toaletter hentet fra JSON-dokumentet*/
 #toaListe{
-  position: absolute;
-  font-size: 1.5em;
-  top: 270px;
-  width: 60%;
+  position: right;
+  font-size: 1em;
+  margin-bottom: auto;
+  margin-top: auto;
+  border: 2px dotted crimson;
 }
 
 /*Søke-funksjonen over toaletter*/
 #searchForm{
+  margin-left: 3em;
   font-size: 1em;
   left: 20px;
   top: 60px;
-  position: relative;
+  bottom: 60px;
+  margin-top: 6em;
 }
